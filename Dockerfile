@@ -5,7 +5,7 @@ RUN go get -u github.com/caddyserver/xcaddy/cmd/xcaddy
 RUN CGO_ENABLED=0 xcaddy build \
   --output artifacts/binaries/linux/caddy \
   --with github.com/lucaslorentz/caddy-docker-proxy/plugin/v2 \
-  --with github.com/mholt/caddy-webdav
+  --with github.com/mholt/caddy-webdav \
   --with github.com/caddy-dns/cloudflare
 RUN chmod +x artifacts/binaries/linux/caddy
 
