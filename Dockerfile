@@ -6,7 +6,8 @@ RUN CGO_ENABLED=0 xcaddy build \
   --output artifacts/binaries/linux/caddy \
   --with github.com/lucaslorentz/caddy-docker-proxy/plugin/v2 \
   --with github.com/mholt/caddy-webdav \
-  --with github.com/caddy-dns/cloudflare
+  --with github.com/caddy-dns/cloudflare \
+  --with github.com/porech/caddy-maxmind-geolocation
 RUN chmod +x artifacts/binaries/linux/caddy
 
 # Image starts here

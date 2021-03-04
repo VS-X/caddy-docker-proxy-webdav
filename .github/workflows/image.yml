@@ -7,7 +7,7 @@ on:
   # run every month to keep this sort-of up-to-date
   # would have been better to re-run when caddy or plugins update, but it doesn't seem easily possible
   schedule:
-    - cron: "0 0 1 * *"
+    - cron: '0 0 1 * *'
 
 jobs:
   build:
@@ -34,7 +34,7 @@ jobs:
         with:
           context: .
           file: ./Dockerfile
-          platforms: linux/amd64,linux/arm/v6,linux/arm/v7,linux/arm64
+          platforms: linux/amd64,linux/arm/v7,linux/arm64
           push: true
           tags: |
             ghcr.io/vs-x/caddy-docker-proxy-webdav:latest
