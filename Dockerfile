@@ -1,7 +1,7 @@
 FROM golang:alpine as builder
 
 RUN apk add -U --no-cache ca-certificates git
-RUN go get -u github.com/caddyserver/xcaddy/cmd/xcaddy 
+RUN go install github.com/caddyserver/xcaddy/cmd/xcaddy@latest
 RUN CGO_ENABLED=0 xcaddy build \
   --output artifacts/binaries/linux/caddy \
   --with github.com/lucaslorentz/caddy-docker-proxy/plugin/v2 \
